@@ -14,7 +14,7 @@ public class Main {
 
         for(int i = 0 ; i< numberAnimals; i++) {
             Animal animal;
-            System.out.println("Въведете данни за животно: <тип-Cat/Dog/Duck/Fish/HummingBird/Zebra> <име> <възраст> <цвят> <пол> <вид храна-МЕАТ/NUTS/FISH_FOOD/GRASS> <диво ли е> <бр крака>");
+            System.out.println("Въведете данни за животно: <тип-Cat/Dog/Duck/Fish/HummingBird/Zebra/Monkey> <име> <възраст> <цвят> <пол> <вид храна-МЕАТ/NUTS/FISH_FOOD/GRASS> <диво ли е> <бр крака>");
             AnimalType type = AnimalType.valueOf(sc.next().toUpperCase());
             switch(type) {
                 case CAT: animal = new Cat(); break;
@@ -24,6 +24,7 @@ public class Main {
                 case HUMMING_BIRD: animal = new HummingBird(); break;
                 case ZEBRA: animal = new Zebra(); break;
                 case DOLPHIN: animal = new Dolphin(); break;
+                case MONKEY: animal = new Monkey(); break;
                 default: animal = new Animal();
             }
             animal.setType(type);
